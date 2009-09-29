@@ -17,7 +17,9 @@
 PRODUCT_PACKAGES := \
 	Calculator \
 	Email \
-	Provision
+	GlobalSearch \
+	Provision \
+	VoiceDialer
 
 $(call inherit-product, build/target/product/generic.mk)
 
@@ -26,3 +28,5 @@ PRODUCT_NAME := aosp_dream
 PRODUCT_MODEL := AOSP on Dream
 PRODUCT_DEVICE := dream-open
 PRODUCT_MANUFACTURER := htc
+
+include frameworks/base/data/sounds/OriginalAudio.mk
