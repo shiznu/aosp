@@ -30,4 +30,6 @@ PRODUCT_MODEL := AOSP on Dream
 PRODUCT_DEVICE := dream-open
 PRODUCT_MANUFACTURER := htc
 
+PRODUCT_COPY_FILES += vendor/aosp/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 include frameworks/base/data/sounds/OriginalAudio.mk
