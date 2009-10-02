@@ -17,6 +17,7 @@
 PRODUCT_PACKAGES := \
 	Calculator \
 	Email \
+	FieldTest \
 	GlobalSearch \
 	Provision \
 	VoiceDialer
