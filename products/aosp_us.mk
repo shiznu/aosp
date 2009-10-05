@@ -14,22 +14,14 @@
 # limitations under the License.
 #
 
-PRODUCT_PACKAGES := \
-	Calculator \
-	Email \
-	FieldTest \
-	GlobalSearch \
-	Provision \
-	VoiceDialer
+# This is the top-level configuration for a US-configured AOSP build
 
-$(call inherit-product, build/target/product/generic.mk)
+$(call inherit-product, vendor/aosp/products/aosp_core.mk)
 
-# Overrides
-PRODUCT_NAME := aosp_dream
-PRODUCT_MODEL := AOSP on Dream
-PRODUCT_DEVICE := dream-open
-PRODUCT_MANUFACTURER := htc
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.android.dateformat=MM-dd-yyyy \
+        ro.com.android.dataroaming=true \
+        ro.ril.hsxpa=1 \
+        ro.ril.gprsclass=10
 
 PRODUCT_COPY_FILES += vendor/aosp/etc/apns-conf.xml:system/etc/apns-conf.xml
-
-include frameworks/base/data/sounds/OriginalAudio.mk

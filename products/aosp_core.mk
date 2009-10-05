@@ -14,16 +14,15 @@
 # limitations under the License.
 #
 
-#
-# This file should set PRODUCT_MAKEFILES to a list of product makefiles
-# to expose to the build system.  LOCAL_DIR will already be set to
-# the directory containing this file.
-#
-# This file may not rely on the value of any variable other than
-# LOCAL_DIR; do not use any conditionals, and do not look up the
-# value of any variable that isn't set in this file or in a file that
-# it includes.
-#
+# This is the central build configuration file for AOSP builds
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_dream_us.mk
+$(call inherit-product, build/target/product/generic.mk)
+$(call inherit-product, vendor/aosp/products/aosp_apps.mk)
+$(call inherit-product, vendor/aosp/products/aosp_locales.mk)
+
+PRODUCT_BRAND := aosp
+PRODUCT_PROPERTY_OVERRIDES += \
+        keyguard.no_require_sim=true
+
+# Pick up some sounds
+include frameworks/base/data/sounds/OriginalAudio.mk

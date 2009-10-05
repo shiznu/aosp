@@ -14,16 +14,6 @@
 # limitations under the License.
 #
 
-#
-# This file should set PRODUCT_MAKEFILES to a list of product makefiles
-# to expose to the build system.  LOCAL_DIR will already be set to
-# the directory containing this file.
-#
-# This file may not rely on the value of any variable other than
-# LOCAL_DIR; do not use any conditionals, and do not look up the
-# value of any variable that isn't set in this file or in a file that
-# it includes.
-#
+# This is the list of locales included in AOSP builds
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_dream_us.mk
+PRODUCT_LOCALES := en_US en_GB fr_FR it_IT de_DE es_ES
