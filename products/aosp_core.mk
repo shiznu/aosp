@@ -20,7 +20,6 @@ $(call inherit-product, build/target/product/generic.mk)
 $(call inherit-product, vendor/aosp/products/aosp_apps.mk)
 $(call inherit-product, vendor/aosp/products/aosp_locales.mk)
 
-PRODUCT_BRAND := aosp
 PRODUCT_PROPERTY_OVERRIDES += \
         keyguard.no_require_sim=true
 

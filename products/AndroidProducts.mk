@@ -26,4 +26,5 @@
 #
 
 PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/aosp_us.mk \
     $(LOCAL_DIR)/aosp_dream_us.mk

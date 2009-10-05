@@ -18,6 +18,10 @@
 
 $(call inherit-product, vendor/aosp/products/aosp_core.mk)
 
+PRODUCT_NAME := aosp_us
+PRODUCT_BRAND := aosp
+PRODUCT_DEVICE := generic
+
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.com.android.dateformat=MM-dd-yyyy \
         ro.com.android.dataroaming=true \
