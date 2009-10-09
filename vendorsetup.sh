@@ -23,4 +23,6 @@
 add_lunch_combo aosp_us-eng
 add_lunch_combo aosp_dream_us-userdebug
 add_lunch_combo aosp_dream_us-eng
+add_lunch_combo aosp_sapphire_us-userdebug
+add_lunch_combo aosp_sapphire_us-eng
 
