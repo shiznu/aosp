@@ -14,18 +14,19 @@
 # limitations under the License.
 #
 
-#
-# This file should set PRODUCT_MAKEFILES to a list of product makefiles
-# to expose to the build system.  LOCAL_DIR will already be set to
-# the directory containing this file.
-#
-# This file may not rely on the value of any variable other than
-# LOCAL_DIR; do not use any conditionals, and do not look up the
-# value of any variable that isn't set in this file or in a file that
-# it includes.
-#
+# This is the config file for an actual configuration
+# AOSP on HTC Dream (ADP1), with US settings
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_emulator_us.mk \
-    $(LOCAL_DIR)/aosp_dream_us.mk \
-    $(LOCAL_DIR)/aosp_sapphire_us.mk
+$(call inherit-product, vendor/aosp/products/aosp_us.mk)
+
+# How this product is called in the build system
+PRODUCT_NAME := aosp_emulator_us
+
+# The user-visible product name
+PRODUCT_MODEL := AOSP (US)
+
+PRODUCT_COPY_FILES := \
+        development/data/etc/vold.conf:system/etc/vold.conf
+
+# Pick up some sounds
+include frameworks/base/data/sounds/OriginalAudio.mk

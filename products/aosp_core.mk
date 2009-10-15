@@ -22,6 +22,3 @@ $(call inherit-product, vendor/aosp/products/aosp_locales.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
         keyguard.no_require_sim=true
-
-# Pick up some sounds
-include frameworks/base/data/sounds/OriginalAudio.mk

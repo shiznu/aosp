@@ -31,3 +31,6 @@ PRODUCT_MODEL := AOSP on Dream (US)
 
 # Pick up some dream-US-specific settings (gps and voice settings for US).
 include vendor/htc/dream-open/device_dream_us.mk
+
+# Pick up some sounds
+include frameworks/base/data/sounds/OriginalAudio.mk
