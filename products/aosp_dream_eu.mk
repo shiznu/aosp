@@ -15,18 +15,22 @@
 #
 
 # This is the config file for an actual configuration
-# AOSP on emulator, with US settings
+# AOSP on HTC Dream (ADP1), with EU settings
 
-$(call inherit-product, vendor/aosp/products/aosp_us.mk)
+$(call inherit-product, vendor/aosp/products/aosp_eu.mk)
 
 # How this product is called in the build system
-PRODUCT_NAME := aosp_emulator_us
+PRODUCT_NAME := aosp_dream_eu
+
+# Which actual hardware this is based on (this is a path under vendor/)
+PRODUCT_MANUFACTURER := htc
+PRODUCT_DEVICE := dream-open
 
 # The user-visible product name
-PRODUCT_MODEL := AOSP (US)
+PRODUCT_MODEL := AOSP on Dream (EU)
 
-PRODUCT_COPY_FILES := \
-        development/data/etc/vold.conf:system/etc/vold.conf
+# Pick up some dream-EU-specific settings (gps and voice settings for EU).
+include vendor/htc/dream-open/device_dream_eu.mk
 
 # Pick up some sounds
 include frameworks/base/data/sounds/OriginalAudio.mk

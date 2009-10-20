@@ -14,6 +14,18 @@
 # limitations under the License.
 #
 
-# This is the list of locales included in AOSP builds
+# This is the top-level configuration for an EU-configured AOSP build
 
-PRODUCT_LOCALES := en_US en_GB fr_FR it_IT de_DE es_ES
+$(call inherit-product, vendor/aosp/products/aosp_core.mk)
+
+PRODUCT_NAME := aosp_eu
+PRODUCT_BRAND := aosp
+PRODUCT_DEVICE := generic
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.android.dateformat=dd-MM-yyyy \
+        ro.com.android.dataroaming=true \
+        ro.ril.hsxpa=2 \
+        ro.ril.gprsclass=12
+
+PRODUCT_COPY_FILES += vendor/aosp/etc/apns-conf.xml:system/etc/apns-conf.xml

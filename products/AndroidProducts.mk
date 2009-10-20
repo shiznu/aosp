@@ -27,5 +27,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_emulator_us.mk \
+    $(LOCAL_DIR)/aosp_emulator_eu.mk \
     $(LOCAL_DIR)/aosp_dream_us.mk \
-    $(LOCAL_DIR)/aosp_sapphire_us.mk
+    $(LOCAL_DIR)/aosp_dream_eu.mk \
+    $(LOCAL_DIR)/aosp_sapphire_us.mk \
+    $(LOCAL_DIR)/aosp_sapphire_eu.mk

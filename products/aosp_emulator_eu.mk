@@ -15,15 +15,15 @@
 #
 
 # This is the config file for an actual configuration
-# AOSP on emulator, with US settings
+# AOSP on emulator, with EU settings
 
-$(call inherit-product, vendor/aosp/products/aosp_us.mk)
+$(call inherit-product, vendor/aosp/products/aosp_eu.mk)
 
 # How this product is called in the build system
-PRODUCT_NAME := aosp_emulator_us
+PRODUCT_NAME := aosp_emulator_eu
 
 # The user-visible product name
-PRODUCT_MODEL := AOSP (US)
+PRODUCT_MODEL := AOSP (EU)
 
 PRODUCT_COPY_FILES := \
         development/data/etc/vold.conf:system/etc/vold.conf

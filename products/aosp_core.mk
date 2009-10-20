@@ -17,8 +17,54 @@
 # This is the central build configuration file for AOSP builds
 
 $(call inherit-product, build/target/product/generic.mk)
-$(call inherit-product, vendor/aosp/products/aosp_apps.mk)
-$(call inherit-product, vendor/aosp/products/aosp_locales.mk)
 
+# This is the list of apps included in the generic AOSP build
+PRODUCT_PACKAGES := \
+    AlarmClock \
+    AlarmProvider \
+    ApplicationsProvider \
+    Browser \
+    Bugreport \
+    Calculator \
+    Calendar \
+    CalendarProvider \
+    Camera \
+    Contacts \
+    ContactsProvider \
+    DownloadProvider \
+    DrmProvider \
+    Email \
+    FieldTest \
+    GlobalSearch \
+    GoogleSearch \
+    HTMLViewer \
+    LatinIME \
+    Launcher \
+    MediaProvider \
+    Mms \
+    Music \
+    PackageInstaller \
+    Phone \
+    PicoTts \
+    Provision \
+    Settings \
+    SettingsProvider \
+    SoundRecorder \
+    SubscribedFeedsProvider \
+    Sync \
+    SyncProvider \
+    TelephonyProvider \
+    TtsService \
+    Updater \
+    UserDictionaryProvider \
+    VoiceDialer \
+    VpnServices \
+    WebSearchProvider \
+    framework-res
+
+# This is the list of locales included in AOSP builds
+PRODUCT_LOCALES := en_US en_GB fr_FR it_IT de_DE es_ES
+
+# Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES += \
         keyguard.no_require_sim=true
