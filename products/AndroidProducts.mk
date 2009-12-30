@@ -33,5 +33,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_sapphire_us.mk \
     $(LOCAL_DIR)/aosp_sapphire_eu.mk \
     $(LOCAL_DIR)/aosp_magic_us.mk \
-    $(LOCAL_DIR)/aosp_magic_eu.mk \
-    $(LOCAL_DIR)/aosp_sholes_us.mk
+    $(LOCAL_DIR)/aosp_magic_eu.mk
