@@ -15,7 +15,7 @@
 #
 
 # This is the config file for an actual configuration
-# AOSP on HTC Sapphire (ION), with EU settings
+# AOSP on HTC Magic, with EU settings
 
 $(call inherit-product, vendor/aosp/products/aosp_eu.mk)
 
@@ -24,13 +24,13 @@ PRODUCT_NAME := aosp_magic_eu
 
 # Which actual hardware this is based on (this is a path under vendor/)
 PRODUCT_MANUFACTURER := htc
-PRODUCT_DEVICE := sapphire-open
+PRODUCT_DEVICE := magic-open
 
 # The user-visible product name
-PRODUCT_MODEL := AOSP on Sapphire (EU)
+PRODUCT_MODEL := AOSP on Magic (EU)
 
-# Pick up some sapphire-US-specific settings (gps and voice settings for US).
-include vendor/htc/magic-open/device_sapphire_eu.mk
+# Pick up some magic-US-specific settings (gps and voice settings for US).
+include vendor/htc/magic-open/device_magic_eu.mk
 
 # Pick up some sounds
 include frameworks/base/data/sounds/AudioPackage2.mk
